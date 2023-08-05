@@ -14,6 +14,7 @@ const AuthContext = createContext<IAuthProvider | null>(null);
 const AuthProvider = (props: any) => {
     const [userName, setUserName] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [email, setEmail] = useState(false);
 
     return (
         <AuthContext.Provider value={{userName, setUserName, isLoggedIn, setIsLoggedIn, email, setEmail}}>
