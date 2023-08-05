@@ -35,9 +35,10 @@ const Registration = (props: any) => {
                             <TextInput placeholder='password' value={password} onChangeText={handlePassInput} style={styles.inputStyles}/>
                             <TextInput placeholder='email' value={email} onChangeText={handleEmailInput} style={styles.inputStyles}/>
                         </View>
-                        <View>
-                            <Button title="Submit" onPress={() => handleOnSubmit(auth as IAuthProvider)}/>
+                        <View style={{margin: 10, width: 200}}>
+                            <Button title="SIGN UP" onPress={() => handleOnSubmit(auth as IAuthProvider)}/>
                         </View>
+                        <Text>Already have an account? <Text style={{color: "#3543D3"}}>Login</Text> </Text>
                     </View>
                 )
             }
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     imageStyles: {
         height: 100,
         width: 100,
-        margin: 40
+        marginTop:150
     },
     inputContainer: {
         display: 'flex',
@@ -64,12 +65,12 @@ const styles = StyleSheet.create({
     },
     inputStyles: {
         width: 200,
-        height: 60,
+        height: 40,
         marginTop: 20,
         borderColor: '#000000',
         borderWidth: 1,
         borderRadius: 8,
-        fontSize: 25
+        fontSize: 20
     }
 })
 

@@ -51,8 +51,8 @@ const  styles = StyleSheet.create({
     headText:{
         fontSize: 20,
         textAlign: "center",
-        marginTop:80,
-        marginBottom:50
+        marginTop:30,
+        marginBottom:20
     }
 })
 export default Ecommerce;

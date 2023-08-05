@@ -15,10 +15,10 @@ const ProductComponent = (props: IProduct) =>{
                 <Image source={ecommerce} style={styles.imageStyles}/>
             </View>
             <View>
-                <Text>{props.name}</Text>
-                <Text>{props.description}</Text>
-                <Text>{props.amount}</Text>
-                <Button title="Add to bag"/>
+                <Text style={styles.name}>{props.name}</Text>
+                <Text style={styles.description}>{props.description}</Text>
+                <Text style={styles.description}>{props.amount}</Text>
+                <Button  style={styles.childItem} title="Add to bag"/>
             </View>
         </View>
     )
@@ -27,20 +27,33 @@ const ProductComponent = (props: IProduct) =>{
 const styles = StyleSheet.create({
     mainContainer:{
         backgroundColor: "#cef5d8",
-        height: 90,
+        height: 140,
         marginBottom: 10,
         display: 'flex',
         flexDirection: "row",
-        justifyContent: 'center',
-        alignItems: 'center'
+        justifyContent: 'space-around',
+        alignItems: "center",
+        padding: 10
     },
     childContainer:{
         display:"flex",
         flexDirection:"column"
     },
+    childItem:{
+      margin: 5
+    },
+    name:{
+        fontSize: 16,
+        margin: 5
+    },
+    description:{
+        fontSize: 10,
+        margin: 5
+    },
     imageStyles:{
-        height: 40,
-        width: 40
+        height: 60,
+        width: 60,
+        borderRadius: 50
     },
 })
 export default ProductComponent;

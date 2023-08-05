@@ -7,16 +7,13 @@ import Ecommerce from "./src/screens/Ecommerce";
 import Registration from "./src/screens/Registration";
 
 const AuthStack = createStackNavigator();
-
-/*export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app! Some more text here ......</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}*/
-
+const AuthStackScreens = () => {
+    return(
+        <AuthStack.Navigator initialRouteName="register">
+            <AuthStack.Screen name="Register" component={Registration} options={{headerShown: false}}/>
+        </AuthStack.Navigator>
+    )
+}
 
 export default function App() {
   return (
@@ -25,8 +22,7 @@ export default function App() {
           {
             (auth) =>
                 <NavigationContainer>
-                  {/*{auth?.isLoggedIn ? <Ecommerce/> : <Registration/>}*/}
-                  {auth?.isLoggedIn ? <Registration/>: <Ecommerce/>  }
+                  {auth?.isLoggedIn ? <Ecommerce/> : <AuthStackScreens/>}
                 </NavigationContainer>
           }
         </AuthContext.Consumer>
