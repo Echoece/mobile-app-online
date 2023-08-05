@@ -25,7 +25,8 @@ export default function App() {
           {
             (auth) =>
                 <NavigationContainer>
-                  {auth?.isLoggedIn ? <Ecommerce/> : <Registration/>}
+                  {/*{auth?.isLoggedIn ? <Ecommerce/> : <Registration/>}*/}
+                  {auth?.isLoggedIn ? <Registration/>: <Ecommerce/>  }
                 </NavigationContainer>
           }
         </AuthContext.Consumer>
